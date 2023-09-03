@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>Sam Jenkins</title>
+    <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5ac42788365f02e3e527c5e4/1562790848153-5COWSIU38HMEKFY0DVPS/SJ+Logo+Black_Small.png?format=1500w">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="../photos/main_logo.png" class = "logo" alt="SJ Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Senior Data Science Student at UW-Madison</p>
+            <h1>Hi, I'm Sam Jenkins From Minnesota</h1>
+        </div>
+    </div>
+</div>
+<!----------------------------- About Page ------------------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="../photos/beach_photo.JPEG" alt="Sam on Vancouver Island">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Hi! I am currently a senior at the University of Wisconsin-Madison working towards my bachelor's 
+                degree in Data Science (B.S.). I was born in Eagan, Minnesota and lived there my entire childhood. 
+                Growing up in the north gave me many opprotunities to explore the wilderness and planted the seeds 
+                for a lifelong intrest in traveling, and immersing myself in different cultures. I've laid out my
+                biggest passions along with life experiences below if you would like to know more!
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('passions')">Passions</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python/Java</span><br>Backend Development</li>
+                        <li><span>Pytorch Modeling</span><br>Convolutional Neural Network/Image 
+                        Segmentation and Object Detection models</li>
+                        <li><span>Docker</span><br>Creation of, and Development, in Containers</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023</span><br>Machine Learning Intern (Cardinal Glass Ind.)</li>
+                        <li><span>2020-2023</span><br>Data Science/C.S. courses at UW-Madison</li>
+                        <li><span>2019</span><br>Course on Java Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="passions">
+                    <ul>
+                        <li><span>Traveling</span><br>Visited Nine Countries, Goal to visit all 7 Continents</li>
+                        <li><span>Staying Active</span><br>Avid Basketball Player, Swimmer and Runner</li>
+                        <li><span>Music</span><br>Self Taught Piano Player</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------- Portfolio----------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img class = "work" src="../photos/final-monitor.png">
+                <div class="layer">
+                    <h3>Semantic Segmentation Model</h3>
+                    <p>Created a semantic segmentation model to detect haze percentage in glass lites for Cardinal Glass Industries</p>
+                </div>
+            </div>
+            <div class="work">
+                <img class = "work" src="../photos/final-phone.png">
+                <div class="layer">
+                    <h3>Task Tracker App</h3>
+                    <p>The app allows you to enter tasks and track the percentage of tasks completed a day using a calender page</p>
+                </div>
+                <!-- Add link when app is done -->
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------------- Contact ---------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa fa-paper-plane"></i>samjenkins621@gmail.com</p>
+                <p><i class="fa fa-phone"></i>(651) 955-1880</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sam-jenkins-284559209/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/sam_jenkins1010/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://github.com/samjenkins2001" target="_blank"><i class="fa fa-github"></i></a>
+                </div>
+                <a href="../photos/Sam's_resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="btn btn2" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sam Jenkins. Made with GreatStack Easy Tutorials</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+</body>
+</html>
